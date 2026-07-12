@@ -18,7 +18,7 @@ At its heart is a fast, Rust-based scanner, with the pieces built around it to r
 | -------------- | -------------------------------------------------------------------------------------------- |
 | Cargo          | `cargo install provenant-cli`                                                                |
 | Homebrew       | `brew install getprovenant/tap/provenant`                                                    |
-| Container      | `docker run ghcr.io/getprovenant/provenant scan .`                                           |
+| Container      | `docker run -v "$PWD:/src" ghcr.io/getprovenant/provenant scan /src --json-pp -`             |
 | GitHub Actions | `uses: getprovenant/provenant-action@v1`                                                     |
 | Binaries       | Prebuilt archives on the [releases page](https://github.com/getprovenant/provenant/releases) |
 
