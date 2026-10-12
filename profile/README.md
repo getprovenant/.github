@@ -13,16 +13,18 @@ At its heart is a fast, Rust-based scanner, with the pieces built around it to r
 - **[provenant](https://github.com/getprovenant/provenant)** — the core scanner: a CLI, an HTTP service, and an embeddable Rust library. Apache-2.0.
 - **[provenant-action](https://github.com/getprovenant/provenant-action)** — the official GitHub Action for running Provenant scans in your CI workflows.
 - **[homebrew-tap](https://github.com/getprovenant/homebrew-tap)** — the Homebrew tap for installing Provenant on macOS and Linux.
+- **[scoop-bucket](https://github.com/getprovenant/scoop-bucket)** — the Scoop bucket for installing Provenant on Windows.
 - **[getprovenant.github.io](https://github.com/getprovenant/getprovenant.github.io)** — source for the [project website](https://getprovenant.dev): landing page, ScanCode comparison, and blog.
 
 ## Install & run
 
-| Channel        | Get started                                                                                  |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| Cargo          | `cargo install provenant-cli`                                                                |
-| Homebrew       | `brew install getprovenant/tap/provenant`                                                    |
-| Container      | `docker run -v "$PWD:/src" ghcr.io/getprovenant/provenant scan /src --json-pp -`             |
-| GitHub Actions | `uses: getprovenant/provenant-action@v1`                                                     |
-| Binaries       | Prebuilt archives on the [releases page](https://github.com/getprovenant/provenant/releases) |
+| Channel        | Get started                                                                                          |
+| -------------- | ---------------------------------------------------------------------------------------------------- |
+| Cargo          | `cargo install --locked provenant-cli`                                                               |
+| Homebrew       | `brew install getprovenant/tap/provenant`                                                            |
+| Scoop          | `scoop bucket add provenant https://github.com/getprovenant/scoop-bucket && scoop install provenant` |
+| Container      | `docker run -v "$PWD:/src" ghcr.io/getprovenant/provenant scan /src --json-pp -`                     |
+| GitHub Actions | `uses: getprovenant/provenant-action@v1`                                                             |
+| Binaries       | Prebuilt archives on the [releases page](https://github.com/getprovenant/provenant/releases)         |
 
 New here? Start at the [website](https://getprovenant.dev), or go straight to the [main repository](https://github.com/getprovenant/provenant) for documentation, usage, and the output schema.
